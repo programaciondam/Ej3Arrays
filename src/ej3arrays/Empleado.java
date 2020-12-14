@@ -35,6 +35,10 @@ public class Empleado {
     public void setImporteVentas(float importeVentas) {
         this.importeVentas = importeVentas;
     }
+    public void actualizarVentas(float ventas)
+    {
+        importeVentas=importeVentas+ventas;
+    }
 
    
     

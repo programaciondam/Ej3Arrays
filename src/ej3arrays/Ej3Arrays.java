@@ -5,6 +5,8 @@
  */
 package ej3arrays;
 
+import utilidades.Utilidad;
+
 /**
  *
  * @author ADMINMJ
@@ -17,9 +19,16 @@ public class Ej3Arrays {
     public static void main(String[] args) {
         // TODO code application logic here
         Concesionario miEmpresa;
-        miEmpresa=new Concesionario();
+        int nempleados;
+        nempleados=Utilidad.pedirNumeroEntero("numero de empleados", 1, 200);
+        miEmpresa=new Concesionario(nempleados);
         miEmpresa.pedirNombres();
+        miEmpresa.pedirVentas();
         miEmpresa.informe();
+        System.out.println("El empleado con mayor comision"+
+                miEmpresa.mayorComision());
+        System.out.println("El empleado con menor comision"+
+                miEmpresa.menorComision());
     }
     
 }
